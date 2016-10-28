@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Shaolin Tiger</string>
+    <string name="title_activity_main">Shaolin Tiger</string>
+    <string name="name_pup">Ф.И.: </string>
+    <string name="year_pup">Год рождения: </string>
+    <string name="coach_pup">Тренер : </string>
+    <string name="sex_pup"> Пол : </string>
+    <string name="male">М</string>
+    <string name="female">Ж</string>
+    <string name="confirm_button">Далее</string>
+
+
+    <string name="pulls">Подтягивания</string>
+    <string name="hanging">Вис</string>
+    <string name="run">Челн.бег</string>
+    <string name="rope">Скакалка</string>
+    <string name="twine">Шпагат</string>
+    <string name="fobao">Фобао</string>
+    <string name="csbody">Верх.пресс</string>
+    <string name="legs_hold">Удержание ног</string>
+    <string name="push_ups">Отжимания</string>
+    <string name="squats">Присед./Выприг.</string>
+    <string name="sq_one">Присед. на 1 ноге</string>
+
+    <string name="res">Результат: </string>
+    <string name="bttn_name">Расчет</string>
+    <string name="returnToLaunch">Вернуться к вводу данных</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

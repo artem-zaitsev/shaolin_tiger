@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_launch"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.retam.shaolintiger.LaunchActivity">
+
+    <!--It's LaunchActivityLayout. There are fields to
+    get Name, Year, Sex and Trainer of Pupil -->
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minWidth="80dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:inputType="text"
+        android:id="@+id/nameEditText"/>
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:inputType="number"
+        android:id="@+id/yearEditText"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="50dp"
+        android:gravity="center"
+        android:layout_marginTop="300dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:inputType="text"
+        android:id="@+id/trainerEditText"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:textOn="@string/male"
+        android:textOff ="@string/female"
+        android:showText="true"
+        android:id="@+id/sexSwitch"
+        android:checked="false" />
+
+    <!--TextViews for this layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/nameEditText"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="@string/name_pup"
+        android:textSize="20sp"
+        android:fontFamily="Times New Roman"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/yearEditText"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="@string/year_pup"
+        android:textSize="20sp"
+        android:fontFamily="Times New Roman"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/trainerEditText"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="@string/coach_pup"
+        android:textSize="20sp"
+        android:fontFamily="Times New Roman"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/sexSwitch"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="@string/sex_pup"
+        android:textSize="20sp"
+        android:fontFamily="Times New Roman"
+        />
+
+    <!--Button to start mainActivity and set Pupils info -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sexSwitch"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/confirm_button"
+        android:onClick="confirmButtonOnClick"
+        android:id = "@+id/confirmButton"
+        />
+</RelativeLayout>

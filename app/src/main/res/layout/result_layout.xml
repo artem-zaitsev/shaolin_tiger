@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="100dp"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:fontFamily="Times New Roman"
+        android:id="@+id/resultInfoTextView"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textRes"
+        android:text="@string/res"
+        android:layout_gravity="center"
+        android:textSize="25sp"
+        android:fontFamily="Times New Roman"/>
+
+    <Button
+        android:id="@+id/reckBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="@string/bttn_name"
+        android:textSize="20sp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="giveResult"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:visibility="invisible"
+        android:text="@string/returnToLaunch"
+        android:textSize="20sp"
+        android:onClick="returnToLaunchActivity"
+        android:id="@+id/returnButton"/>
+</FrameLayout>
