@@ -1,28 +1,17 @@
 package com.retam.shaolintiger;
 
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class SwipeFragment extends Fragment {
 
     public static final String ARG_PAGE= "page", ARG_INPUT = "input";
@@ -59,7 +48,7 @@ public class SwipeFragment extends Fragment {
 
     OnPageChangeListener mListener;
 
-    //A construct for SwipeFragment
+    //A constructor for SwipeFragment
     public static SwipeFragment create(int pageNumb) {
         SwipeFragment f = new SwipeFragment();
         Bundle args = new Bundle();
@@ -77,6 +66,7 @@ public class SwipeFragment extends Fragment {
             throw new ClassCastException(context.toString() + "must implement onPageChangeListener");
         }
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -114,15 +104,6 @@ public class SwipeFragment extends Fragment {
         }
 
         return rootView;
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        //mListener.onPageChange(this,page_numb);
-        //getFragmentManager().saveFragmentInstanceState(this);
-       //((MainActivity)getActivity()).setInputs(getInput());
-       // Toast.makeText(SwipeFragment.this.getContext(), getInput() + " " + page_numb, Toast.LENGTH_SHORT).show();
     }
 
    public String getInput() {

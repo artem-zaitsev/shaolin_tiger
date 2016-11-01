@@ -54,9 +54,6 @@ public class MainActivity extends AppCompatActivity implements
                 } else {
                     inputs.set(pos - 1, ((SwipePagerAdapter) mPagerAdapter).getCurItem(pos - 1).getInput());
                 }
-                /*Toast.makeText(getApplicationContext(),"Page: " + (pos-1) + " Value: " +
-                        ((SwipePagerAdapter)mPagerAdapter).getCurItem(pos-1).getInput(),Toast.LENGTH_SHORT).show();
-                        */
             }
         });
 
@@ -65,8 +62,6 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public void onPageChange(SwipeFragment sf, int page) {
         inputs.add(page, sf.getInput());
-        //Toast.makeText(getApplicationContext(),"Value: " + sf.getInput(),
-        //          Toast.LENGTH_SHORT).show();
     }
 
     //OnClick Event for reckBtn
@@ -80,15 +75,14 @@ public class MainActivity extends AppCompatActivity implements
             TextView tv = (TextView) findViewById(R.id.textRes);
             tv.setText("Результат: " + pup.getResult());
             TextView info = (TextView) findViewById(R.id.resultInfoTextView);
-            info.setText("Ученик(ца) " + pup.getName() + ", год рождения " + pup.getYear() +
-                    ", тренер " + pup.getTrainerName() + ".");
+            info.setText("Ученик(ца) " + pup.getName() + ".\n Год рождения " + pup.getYear() +
+                    ".\n Тренер " + pup.getTrainerName() + ".");
 
             Button return_btn = (Button) findViewById(R.id.returnButton);
             return_btn.setVisibility(View.VISIBLE);
 
             Button reck_btn = (Button) findViewById(R.id.reckBtn);
             reck_btn.setEnabled(false);
-
         } else {
             //nothing
             Toast t = Toast.makeText(this.getApplicationContext(),
@@ -104,13 +98,9 @@ public class MainActivity extends AppCompatActivity implements
 
     public boolean isNullFields() {
         int c = 0;
-
-        //ed = (EditText)findViewById(R.id.editExc);
         for (Iterator i = inputs.iterator(); i.hasNext(); ) {
             c = (i.next().toString().equals("null")) ? c + 1 : c;
         }
-
-
         return (c > 0);
     }
 
