@@ -23,8 +23,13 @@ import com.retam.shaolintiger.persons.Pupil;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class MainActivity extends AppCompatActivity implements
-        SwipeFragment.OnPageChangeListener {
+/*
+    Activity с ViewPager. Содержит Фрагменты с упражнением
+     и полем ввода. Введенные данные собираются в inputs во
+     время перелистывания страницы пейджера.
+ */
+public class MainActivity extends AppCompatActivity /*implements
+        SwipeFragment.OnPageChangeListener*/ {
 
 
     private static final int NUM_PAGES = 14;
@@ -43,11 +48,14 @@ public class MainActivity extends AppCompatActivity implements
         mPager = (ViewPager) findViewById(R.id.pager);
         mPagerAdapter = new SwipePagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
+
+        // Листенер на изменение страницы
         mPager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {
                 int pos = position; // local variable for position
                 if (position == 0) pos = 1;
+                //проверка на содержимое элемента ArrayList'а
                 if (inputs.size() <= (pos - 1)) {
                     inputs.add(pos - 1, ((SwipePagerAdapter) mPagerAdapter).getCurItem(pos - 1).getInput());
 
@@ -59,10 +67,12 @@ public class MainActivity extends AppCompatActivity implements
 
     }
 
+/*
     @Override
     public void onPageChange(SwipeFragment sf, int page) {
         inputs.add(page, sf.getInput());
     }
+*/
 
     //OnClick Event for reckBtn
     public void giveResult(View view) {
@@ -84,7 +94,6 @@ public class MainActivity extends AppCompatActivity implements
             Button reck_btn = (Button) findViewById(R.id.reckBtn);
             reck_btn.setEnabled(false);
         } else {
-            //nothing
             Toast t = Toast.makeText(this.getApplicationContext(),
                     "Ошибка! Не все поля заполнены, проверьте.",
                     Toast.LENGTH_SHORT);
@@ -104,11 +113,6 @@ public class MainActivity extends AppCompatActivity implements
         return (c > 0);
     }
 
-    public void setInputs(String inp) {
-        inputs.add(inp);
-    }
-
-
     @Override
     public void onBackPressed() {
         if (mPager.getCurrentItem() == 0) {
@@ -124,7 +128,7 @@ public class MainActivity extends AppCompatActivity implements
     private class SwipePagerAdapter extends FragmentStatePagerAdapter {
         private ArrayList<SwipeFragment> swipeFragments = new ArrayList<>(13);
 
-        public SwipePagerAdapter(FragmentManager fm) {
+        SwipePagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
@@ -140,7 +144,8 @@ public class MainActivity extends AppCompatActivity implements
             }
         }
 
-        public SwipeFragment getCurItem(int pos) {
+        // Возвращает текущий Item из ArrayList'а
+        SwipeFragment getCurItem(int pos) {
             return swipeFragments.get(pos);
         }
 

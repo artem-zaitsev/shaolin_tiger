@@ -46,7 +46,8 @@ public class SwipeFragment extends Fragment {
                                        R.drawable.pistol_squat};
     private EditText editText;
 
-    OnPageChangeListener mListener;
+    // Пробовал с реализацией слушателя на самом фрагменте
+    // OnPageChangeListener mListener;
 
     //A constructor for SwipeFragment
     public static SwipeFragment create(int pageNumb) {
@@ -57,7 +58,7 @@ public class SwipeFragment extends Fragment {
         return f;
     }
 
-    @Override
+    /*@Override
     public void onAttach(Context context) {
         super.onAttach(context);
         try {
@@ -65,7 +66,7 @@ public class SwipeFragment extends Fragment {
         } catch (ClassCastException ce) {
             throw new ClassCastException(context.toString() + "must implement onPageChangeListener");
         }
-    }
+    }*/
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -114,9 +115,10 @@ public class SwipeFragment extends Fragment {
         return s;
     }
 
+    /*
     //must be implemented by Activity
     public interface OnPageChangeListener {
         void onPageChange(SwipeFragment sf,int page) ;
     }
-
+    */
 }
