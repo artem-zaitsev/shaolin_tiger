@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/resultInfoTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="100dp"
-        android:textSize="25sp"
-        android:textAlignment="center"
         android:fontFamily="Times New Roman"
-        android:id="@+id/resultInfoTextView"/>
+        android:textAlignment="center"
+        android:textSize="25sp" />
 
     <TextView
+        android:id="@+id/textRes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textRes"
-        android:text="@string/res"
         android:layout_gravity="center"
-        android:textSize="25sp"
-        android:fontFamily="Times New Roman"/>
+        android:fontFamily="Times New Roman"
+        android:text="@string/res"
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/reckBtn"
@@ -30,18 +30,19 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:text="@string/bttn_name"
-        android:textSize="20sp"
         android:background="@color/colorPrimaryDark"
-        android:onClick="giveResult"/>
+        android:onClick="giveResult"
+        android:text="@string/bttn_name"
+        android:textSize="20sp" />
+
     <Button
+        android:id="@+id/returnButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="150dp"
-        android:visibility="invisible"
+        android:onClick="returnToLaunchActivity"
         android:text="@string/returnToLaunch"
         android:textSize="20sp"
-        android:onClick="returnToLaunchActivity"
-        android:id="@+id/returnButton"/>
+        android:visibility="invisible" />
 </FrameLayout>

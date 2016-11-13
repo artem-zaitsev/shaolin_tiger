@@ -3,38 +3,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="0dp"
-    tools:context="com.retam.shaolintiger.SwipeFragment"
-    >
+    tools:context="com.retam.shaolintiger.SwipeFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_gravity="center"
         android:layout_marginTop="-150dp"
-        android:src="@drawable/pull_up"
-        android:id = "@+id/imageView"/>
+        android:src="@drawable/pull_up" />
+
     <TextView
-            android:id="@+id/name_exc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="-10dp"
-            android:text=""
-            android:textSize="24sp"
-            android:fontFamily="Times New Roman"/>
+        android:id="@+id/name_exc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="-10dp"
+        android:fontFamily="Times New Roman"
+        android:text=""
+        android:textSize="24sp" />
 
     <EditText
-            android:id="@+id/editExc"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:inputType="numberDecimal"
-            android:selectAllOnFocus="false"
-            android:textAlignment="center"
-        />
-
+        android:id="@+id/editExc"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="false"
+        android:textAlignment="center" />
 
 
 </FrameLayout>

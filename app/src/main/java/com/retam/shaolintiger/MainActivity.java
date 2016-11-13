@@ -67,12 +67,6 @@ public class MainActivity extends AppCompatActivity /*implements
 
     }
 
-/*
-    @Override
-    public void onPageChange(SwipeFragment sf, int page) {
-        inputs.add(page, sf.getInput());
-    }
-*/
 
     //OnClick Event for reckBtn
     public void giveResult(View view) {
